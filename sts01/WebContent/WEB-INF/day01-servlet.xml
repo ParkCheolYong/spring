@@ -6,4 +6,12 @@
 
 	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
 	<bean name="/index.bit" class="com.bit.controller.IndexController"></bean>
+	<bean name="/main.bit" class="com.bit.controller.MainController">
+		<property name="msg" value="123abc"></property><!-- setter를 이용한 필드 주입 -->
+	</bean>
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
 </beans>
