@@ -35,4 +35,16 @@ public class BbsDao1Impl implements BbsDao {
 		});
 	}
 
+	@Override
+	public void InsertOne(BbsVo bean) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public BbsVo selectOne(int num) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

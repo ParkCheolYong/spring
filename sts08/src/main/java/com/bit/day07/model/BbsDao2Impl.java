@@ -19,4 +19,15 @@ public class BbsDao2Impl implements BbsDao {
 		return sqlSession.selectList("bbs.selectAll");
 	}
 
+	@Override
+	public void InsertOne(BbsVo bean) throws SQLException {
+		sqlSession.insert("bbs.insertOne",bean);
+		
+	}
+
+	@Override
+	public BbsVo selectOne(int num) throws SQLException {
+		return sqlSession.selectOne("bbs.selectOne",num);
+	}
+
 }

@@ -20,4 +20,15 @@ public class BbsServiceImpl implements BbsService {
 		return bbsDao.selectAll();
 	}
 
+	@Override
+	public void bbsAdd(BbsVo bean) throws SQLException {
+		bbsDao.InsertOne(bean);
+		
+	}
+
+	@Override
+	public BbsVo detail(int num) throws SQLException {
+		return bbsDao.selectOne(num);
+	}
+
 }
